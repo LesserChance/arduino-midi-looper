@@ -1,3 +1,4 @@
+
 /**
  * @var {Int} the midi channel to listen on
  */
@@ -91,8 +92,8 @@ const byte MAX_PITCHES_PER_PAD = 2;
 const byte SNARE = 0;
 const byte TOM_ONE = 1;
 const byte TOM_TWO = 2;
-const byte FLOOR_TOM = 4;
-const byte HI_HAT = 5;
-const byte CRASH = 6;
-const byte RIDE = 7;
-const byte BASS_DRUM = 8;
+const byte FLOOR_TOM = 3;
+const byte HI_HAT = 4;
+const byte CRASH = 5;
+const byte RIDE = 6;
+const byte BASS_DRUM = 7;

@@ -1,7 +1,8 @@
-
 #include <SoftwareSerial.h>
-#include <MIDI.h>
 #include <Adafruit_NeoPixel.h>
+#include <MIDI.h>
+
+MIDI_CREATE_DEFAULT_INSTANCE();
 
 /**
  * Initialize the Arduino

@@ -1,5 +1,9 @@
 void startEffect(int pad_index, byte velocity) {
     byte brightness = expScale(velocity);
+    if (brightness > 255) {
+        brightness = 255;
+    }
+    
     uint32_t color = getPadColor(pad_index, brightness);
     
     effect_running[pad_index] = true;
@@ -86,17 +90,17 @@ uint32_t getPadColor(int pad_index, byte brightness) {
             break;
         case CRASH:
             red = 255;
-            green = 255;
-            blue = 0;
-            break;
-        case RIDE:
-            red = 255;
             green = 128;
             blue = 128;
             break;
+        case RIDE:
+            red = 255;
+            green = 255;
+            blue = 0;
+            break;
         case BASS_DRUM:
             red = 255;
-            green = 0;
+            green = 255;
             blue = 255;
             break;
     }
@@ -127,5 +131,7 @@ void resetPadEffect(int pad_index) {
 unsigned long expScale(float val) {
     float a = 3.351;
     float b = 1.034;
-    return a * (pow(b, val));
+
+    //scaling velocity up so I dont have to wail my drums
+    return a * (pow(b, (val * 1.5)));
 }

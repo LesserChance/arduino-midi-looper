@@ -125,7 +125,7 @@ byte effect_inital_value[PAD_COUNT];
  ***************************/
 /**
  * @var {byte[][]} the possible pitches each pad can produce
- *                 pad_pitches[pad] = array of pitche
+ *                 pad_pitches[pad] = array of pitches
  */
 byte pad_pitches[PAD_COUNT][MAX_PITCHES_PER_PAD] = {
     {38},
@@ -133,8 +133,8 @@ byte pad_pitches[PAD_COUNT][MAX_PITCHES_PER_PAD] = {
     {45},
     {41},
     {46},
-    {49},
-    {51},
+    {49, 55},
+    {51, 59},
     {36}
 };
 
